@@ -19,8 +19,14 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <Sidebar />
-        <Container />
+        <div className="containerSidebar">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="container">
+            <Container />
+          </div>
+        </div>
         <Footer />
       </div>
     )

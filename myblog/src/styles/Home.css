@@ -1,0 +1,12 @@
+.containerSidebar {
+    display: flex;
+}
+.sidebar {
+  width: 20em;
+  height: auto;
+  background-color: grey;
+  overflow-y: scroll;
+}
+.container {
+  
+}

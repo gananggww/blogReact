@@ -11,7 +11,10 @@ class Header extends Component {
   }
   render () {
     return (
-      <div>Header</div>
+      <div className="header">
+        <div id="title">GANANG WAHYU WICAKSONO</div>
+        <input id="searchBar" type="text" name="search"/>
+      </div>
     )
   }
 }
