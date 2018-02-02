@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import '../../styles/Container.css'
 
 class Container extends Component {
   constructor() {
@@ -14,4 +16,5 @@ class Container extends Component {
   }
 }
 
-export default Container
+const Conn = connect(null, null)(Container)
+export default Conn
