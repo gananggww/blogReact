@@ -14,6 +14,7 @@ class Sidebar extends Component {
     }
   }
   render () {
+    console.log();
     return (
       <div>Sidebar</div>
     )

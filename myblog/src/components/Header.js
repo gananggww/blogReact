@@ -12,7 +12,7 @@ class Header extends Component {
   render () {
     return (
       <div className="header">
-        <div id="title">GANANG WAHYU WICAKSONO</div>
+        <div id="title">-</div>
         <input id="searchBar" type="text" name="search"/>
       </div>
     )
