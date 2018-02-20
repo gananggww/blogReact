@@ -13,6 +13,9 @@ class Sidebar extends Component {
 
     }
   }
+  componentWillMount () {
+    this.props.getStat()
+  }
   render () {
     console.log();
     return (
@@ -23,9 +26,9 @@ class Sidebar extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getStat: payload => dispatch(fetchArticle(payload)),
+    getStat: () => dispatch(fetchArticle()),
   }
 }
 
-const Conn = connect(null, null)(Sidebar)
+const Conn = connect(null, mapDispatchToProps)(Sidebar)
 export default Conn
