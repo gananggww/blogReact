@@ -16,11 +16,30 @@ class Sidebar extends Component {
   componentWillMount () {
     this.props.getStat()
   }
+
   render () {
-    console.log();
-    return (
-      <div>Sidebar</div>
-    )
+    if (this.props.title !== undefined) {
+      return (
+        <div className="listTitle">
+        {
+          this.props.title.map(item => {
+            return (<div className="haihai">{item}</div>)
+          })
+        }
+        </div>
+      )
+    } else {
+      return <div></div>
+    }
+
+  }
+}
+
+const mapStateToProps = state => {
+  if (state.articles.length > 0) {
+    return {
+      title: state.articles
+    }
   }
 }
 
@@ -30,5 +49,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const Conn = connect(null, mapDispatchToProps)(Sidebar)
-export default Conn
+const conn = connect(mapStateToProps, mapDispatchToProps)(Sidebar)
+
+export default conn

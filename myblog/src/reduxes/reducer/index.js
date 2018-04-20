@@ -1,5 +1,5 @@
 const defaultState = {
-  articles: null
+  articles: []
 }
 
 const articleReducer = (state=defaultState, action) => {
